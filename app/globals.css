@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-accent: #0f766e;
+  --color-accent-strong: #115e59;
+  --color-warn: #b45309;
+  --color-danger: #b91c1c;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-neutral-100 text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100;
+}
+
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-accent;
+}
